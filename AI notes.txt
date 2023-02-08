@@ -1,0 +1,135 @@
+1. range(0,10)
+	for i in range(1,10,2):
+
+2. // : floor division (Round it DOWN)
+   ** : exponentiation (x ** y = x ^ y)
+
+3. void sum(int a, int b)
+	-> def (a, b)
+
+4. s[start : < stop : steps] == substring
+   s[0:-1] means from start till 1st from last	/  peeche se ek kam
+   s[:] -> means start to finish (empty means end)
+   var[::2]  -->  Ida ry
+   var[::-1] -->  ymrA naidnI
+   len() -> returns length of String
+
+5. s1.equals(s2);
+	s1 == s2
+   + -> concats
+
+6. import random as r  # random stores as ARRAY / LIST
+	r.random()      : any no b/w 0-1
+	r.random(str, 10) : any 10 chars from String "str"
+	r.uniform(1, 100)
+	r.randint(a, b) : any integer b/w a-b
+	r.uniform(a, b) : any real no b/w a-b
+   import math as m
+
+7. 	import string as s
+	import random as r
+
+	s.ascii_letters -> abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY
+	s.digits	    -> 0123456789		# Both strings
+
+	# PASSWORDS :-
+	password = r.random(s.ascii_letters+s.digits, 10)  -> LIST
+	password = "".join(password)  -> String
+	
+8. LISTS
+	Arrays -> collection of single datatypes, can manage mathematical operations, arr = [1, 2, 3, 4]
+	List -> collection of multiple datatypes, can't manage mathematical operations, L = ["Pratham",  'Sharma', 3.14,  3 ]
+	
+	L[0] = "Pratham"
+	
+	Iteration :-
+     a)	i = 0
+	while i < len(L)
+		print(L[i])
+     b) for i in L
+     		print(i)
+	
+	Operations :- 
+	len(L),sum(L),del,append,max,min,L.sort(),L.insert[2,"Rahul"]
+	
+	Searching :-
+	if (6 in L) == True:
+		print("Present!")
+	else:
+		print("Not Present.")
+	
+9. DICTIONARY  
+	Dictionary = { Keys : Values }
+	
+	CGPA = {"Devansh":10 , 'Dhruv':9.9}
+	print (CGPA) -> {"Devansh": 10, 'Dhruv': 9.9}
+	print (CGPA["Devansh"]) -> 10
+	print (CGPA['Dhruv'])   -> 9.9
+	
+	CGPA={1:8.9, 2:5.6, 4:6.7}
+	for i in CGPA:
+	print ("CGPA of ", i, " --> ", CGPA[i])
+	CGPA of  1  -->  8.9
+	CGPA of  2  -->  5.6
+	CGPA of  4  -->  6.7
+	
+	CGPA = {1:8.9, 2:5.6, 4:6.7, 7:9.1, 8:5.3}
+	K = list(CGPA.keys())   -> [1, 2, 4, 7, 8]
+	V = list(CGPA.values()) -> [8.9, 5.6, 6.7, 9.1, 5.3]
+	
+	CGPA = {1:8.9, 2:5.6, 4:6.7, 7:9.1, 8:5.3}
+	CGPA[3] = 9 # added since didn't exist before
+	del CGPA[1]
+	CGPA.clear()
+	
+	Checking for a element :-
+	print ("Is Key 2 Present    --> ", 2 in CGPA)
+	print ("Is Key 9 Present    --> ", 9 in CGPA)
+	
+10. TUPLE	
+	Array      -> arr = [1, 2, 3, 4]
+	List  	   -> L = ["Pratham", 'Sharma', 3.14, 3]
+	Tuple	   -> T = ("Pratham", 'Sharma', 3.14, 3)
+	Dictionary -> D = { Keys : Values }
+	Set	   -> a = set(['A', 'B', 'E', 'F'])
+	
+	All operations/workings same as list.
+	It is possible to change/modify a list but not a tuple.
+	
+	list(A)  -> converts object A to List
+	tuple(A) -> converts object A to Tuple
+	
+11. SET
+	follows property of sets
+	a = set(['A', 'B', 'E', 'F'])	# unordered first
+	
+	a.add('D') -> adds element
+	a.remove('D') -> removes
+	a.pop() -> deletes first element in set
+	
+	a = set(['A', 'B', 'E', 'F' ])
+	b = set(["A", "C", "D", "E"])
+	print ("Original set a      --> ", a)
+	print ("Original set b      --> ", b)
+	print ("Union of a and b    --> ", a.union(b))
+	print ("Intersection of a,b --> ", a.intersection(b))
+	print ("Difference a - b    --> ", a - b)
+	print ("Difference a - b    --> ", a.difference(b))
+	print ("Difference b - a    --> ", b - a)
+	print ("Difference b - a    --> ", b.difference(a))
+	print ("Symetric Diff a - b --> ", a.symmetric_difference(b))
+	print ("Symetric Diff b - a --> ", b.symmetric_difference(a))
+	
+	Original set a      -->  {'E', 'A', 'F', 'B'}
+	Original set b      -->  {'E', 'A', 'D', 'C'}
+	Union of a and b    -->  {'B', 'D', 'F', 'E', 'A', 'C'}
+	Intersection of a,b -->  {'E', 'A'}
+	Difference a - b    -->  {'F', 'B'}
+	Difference a - b    -->  {'F', 'B'}
+	Difference b - a    -->  {'D', 'C'}
+	Difference b - a    -->  {'D', 'C'}
+	Symetric Diff a - b -->  {'F', 'D', 'C', 'B'}
+	Symetric Diff b - a -->  {'B', 'F', 'D', 'C'}
+
+12. OOPS
+	self == this
